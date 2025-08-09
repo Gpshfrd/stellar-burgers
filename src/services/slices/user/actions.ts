@@ -49,5 +49,5 @@ export const updateUserThunk = createAsyncThunk(
 
 export const getOrdersThunk = createAsyncThunk(
   'users/getUserOrders',
-  async () => getOrdersApi()
+  getOrdersApi
 );

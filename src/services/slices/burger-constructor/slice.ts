@@ -1,4 +1,3 @@
-import { BurgerConstructor } from '@components';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { TConstructorIngredient, TIngredient } from '@utils-types';
 import { v4 as uuidv4 } from 'uuid';
@@ -62,7 +61,7 @@ const burgerConstructorSlice = createSlice({
       state,
       action: PayloadAction<TConstructorIngredient>
     ) => {
-      const id = action.payload._id;
+      const id = action.payload.id;
       if (!id) return;
       state.burgerConstructor.ingredients =
         state.burgerConstructor.ingredients.filter(
