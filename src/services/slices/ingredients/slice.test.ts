@@ -1,15 +1,9 @@
-import reducer, { IngredientsState } from './slice';
+import reducer, { initialState } from './slice';
 import { getIngredientsThunk } from './actions';
 import { TIngredient } from '@utils-types';
 import { expect } from '@jest/globals';
 
 describe('ingredientsSlice', () => {
-  const initialState: IngredientsState = {
-    ingredients: [],
-    isIngredientsLoading: false,
-    error: null
-  };
-
   const mockIngredients: TIngredient[] = [
     {
       _id: '1',

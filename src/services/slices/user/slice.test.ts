@@ -1,5 +1,5 @@
 import { TOrder } from '@utils-types';
-import reducer, { clearErrors, UserState } from './slice';
+import reducer, { initialState, clearErrors } from './slice';
 import {
   getOrdersThunk,
   getUserThunk,
@@ -9,18 +9,8 @@ import {
   updateUserThunk
 } from './actions';
 import { expect } from '@jest/globals';
-import exp from 'constants';
 
 describe('user slice', () => {
-  const initialState: UserState = {
-    isAuthenticated: false,
-    user: null,
-    loginUserRequest: false,
-    error: null,
-    orders: [],
-    ordersRequest: false
-  };
-
   const mockUser = {
     email: 'test@ex.com',
     name: 'Test'

@@ -1,5 +1,4 @@
 import { TIngredient } from '@utils-types';
-import reducer from '../user/slice';
 import { createSlice } from '@reduxjs/toolkit';
 import { getIngredientsThunk } from './actions';
 
@@ -9,7 +8,7 @@ export interface IngredientsState {
   error: string | null;
 }
 
-const initialState: IngredientsState = {
+export const initialState: IngredientsState = {
   ingredients: [],
   isIngredientsLoading: false,
   error: null

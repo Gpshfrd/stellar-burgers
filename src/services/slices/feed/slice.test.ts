@@ -1,19 +1,9 @@
 import { TOrder } from '@utils-types';
-import reducer, { FeedState } from './slice';
+import reducer, { initialState } from './slice';
 import { getFeedsThunk, getOrderByNumberThunk } from './actions';
 import { expect } from '@jest/globals';
 
 describe('feedSlice', () => {
-  const initialState: FeedState = {
-    orders: [],
-    isFeedsLoading: false,
-    order: null,
-    isOrderLoading: false,
-    total: 0,
-    totalToday: 0,
-    error: null
-  };
-
   const mockOrders: TOrder[] = [
     {
       _id: '1',

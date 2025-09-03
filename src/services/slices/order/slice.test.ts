@@ -1,20 +1,13 @@
 import { orderBurgerThunk } from './actions';
 import reducer, {
+  initialState,
   clearOrder,
   clearPendingOrderData,
-  OrderState,
   setPendingOrderData
 } from './slice';
 import { expect } from '@jest/globals';
 
 describe('orderSlice', () => {
-  const initialState: OrderState = {
-    order: null,
-    isOrderLoading: false,
-    error: null,
-    pendingOrderData: null
-  };
-
   const mockOrder = {
     number: 1,
     name: 'burgr',
